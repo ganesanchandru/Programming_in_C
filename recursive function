@@ -1,0 +1,29 @@
+//calculate the sum of the first N
+natural numbers using a recursive 
+function
+
+#include<stdio.h>
+
+// Recursive function to calculate the sum of first N natural numbers
+int sumOfN(int n) {
+    // Base case: sum of 0 natural numbers is 0
+    if (n == 0) {
+        return 0;
+    } else {
+        // Recursive case: sum of N natural numbers is N + sum of (N-1) natural numbers
+        return n + sumOfN(n - 1);
+    }
+}
+
+int main() {
+    int N;
+
+    // Input the value of N
+    printf("Enter the value of N: ");
+    scanf("%d", &N);
+
+    // Calculate and print the sum
+    printf("Sum of first %d natural numbers: %d\n", N, sumOfN(N));
+
+    return 0;
+}
